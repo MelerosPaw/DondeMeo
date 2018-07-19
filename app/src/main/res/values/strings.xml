@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">¿Dónde meo?</string>
+
+    <!-- Login -->
+    <string name="login__screen_title">Inicio de sesión</string>
+    <string name="login__user">Usuario</string>
+    <string name="login__password">Contraseña</string>
+    <string name="login__btn__log_in">Iniciar sesión</string>
+    <string name="login__btn__sign_up">Registrarse</string>
+    <string name="login__menu_item__unexplored">Sin orinar</string>
+    <string name="login__menu_item__reviewed">Orinados</string>
+    <string name="login__menu_item__history">Historial</string>
+
+    <!--  Main -->
+    <string name="main__screen_title">¿Dónde quieres orinar?</string>
+
+</resources>
