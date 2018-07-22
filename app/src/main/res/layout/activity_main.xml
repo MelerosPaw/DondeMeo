@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".ui.LoginActivity">
+    tools:context=".ui.MainActivity">
 
     <View
         android:id="@+id/main__map"
@@ -25,8 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_margin="16dp"
-            android:src="@android:drawable/ic_input_add"
-            app:fabSize="normal" />
+            android:src="@drawable/icon_plus"
+            app:fabSize="normal"/>
 
         <android.support.design.widget.BottomNavigationView
             android:layout_width="match_parent"

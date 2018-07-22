@@ -15,4 +15,24 @@
     <!--  Main -->
     <string name="main__screen_title">¿Dónde quieres orinar?</string>
 
+    <!--  New Pee Point -->
+    <string name="new_pee_point__screen_title">¿Cómo se orina aquí?</string>
+    <string name="new_pee_point__add_a_picture">Añade una foto</string>
+    <string name="new_pee_point__change_picture">Cambiar la foto</string>
+    <string name="new_pee_point__cleanness">Limpieza</string>
+    <string name="new_pee_point__soap">Jabón</string>
+    <string name="new_pee_point__basin">Lavabo</string>
+    <string name="new_pee_point__paper">Papel</string>
+    <string name="new_pee_point__cologne">Colonia</string>
+    <string name="new_pee_point__disabled_adapted">Adaptado para movilidad reducida</string>
+    <string name="new_pee_point__need_be_customer">¿Hay que consumir?</string>
+    <string name="new_pee_point__there_is">Hay</string>
+    <string name="new_pee_point__there_isnt">No hay</string>
+    <string name="new_pee_point__didnt_check">No me he fijado</string>
+    <string name="new_pee_point__yes">Sí</string>
+    <string name="new_pee_point__no">No</string>
+    <string name="new_pee_point__comments">Comentarios</string>
+    <string name="new_pee_point__comments_hint">Algo que quieras destacar del baño…</string>
+    <string name="new_pee_point__done">Listo</string>
+
 </resources>

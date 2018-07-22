@@ -25,6 +25,9 @@
         <activity android:name=".ui.MainActivity"
             android:label="@string/main__screen_title"/>
 
+        <activity android:name=".ui.NewPeePointActivity"
+            android:label="@string/new_pee_point__screen_title"/>
+
     </application>
 
 </manifest>
