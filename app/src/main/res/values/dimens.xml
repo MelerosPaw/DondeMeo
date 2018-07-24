@@ -4,4 +4,5 @@
 
     <dimen name="new_pee_point__item_separation">20dp</dimen>
     <dimen name="new_pee_point__item_title_text_size">16sp</dimen>
+    <dimen name="new_pee_point__item_padding">10dp</dimen>
 </resources>

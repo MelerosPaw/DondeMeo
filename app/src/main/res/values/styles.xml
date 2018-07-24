@@ -6,10 +6,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="NewPeePointItem">
+    <style name="NewPeePointItemTitle">
         <item name="android:layout_marginTop">@dimen/new_pee_point__item_separation</item>
         <item name="android:textSize">@dimen/new_pee_point__item_title_text_size</item>
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="NewPeePointItemContent">
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
 </resources>

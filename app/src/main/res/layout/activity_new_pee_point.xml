@@ -10,9 +10,9 @@
     <es.mabao.melerospaw.dondemeo.widgets.VerticalScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="vertical"
+        android:padding="@dimen/activity_vertical_margin"
         android:scrollbarThumbVertical="@drawable/scrollbars"
-        android:padding="@dimen/activity_vertical_margin">
+        android:scrollbars="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,7 +78,7 @@
 
             <!-- Cleanness -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__cleanness" />
@@ -91,52 +91,74 @@
 
             <!-- Soap -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__soap" />
 
-            <LinearLayout
+            <FrameLayout
+                android:id="@+id/new_pee_point__container__soap_selector"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                style="@style/NewPeePointItemContent"
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="0dp"
+                <View
+                    android:id="@+id/new_pee_point__selected_soap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="@string/new_pee_point__there_is" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="@string/new_pee_point__there_isnt" />
+                    <TextView
+                        android:id="@+id/new_pee_point__label__there_is_soap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/new_pee_point__item_padding"
+                        android:paddingBottom="@dimen/new_pee_point__item_padding"
+                        android:gravity="center_horizontal"
+                        android:text="@string/new_pee_point__there_is" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="@string/new_pee_point__didnt_check" />
+                    <TextView
+                        android:id="@+id/new_pee_point__label__there_isnt_soap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/new_pee_point__item_padding"
+                        android:paddingBottom="@dimen/new_pee_point__item_padding"
+                        android:gravity="center_horizontal"
+                        android:text="@string/new_pee_point__there_isnt" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/new_pee_point__label__havent_checked_soap"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/new_pee_point__item_padding"
+                        android:paddingBottom="@dimen/new_pee_point__item_padding"
+                        android:gravity="center_horizontal"
+                        android:text="@string/new_pee_point__didnt_check" />
+
+                </LinearLayout>
+
+            </FrameLayout>
 
 
             <!-- Basin -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__basin" />
 
             <LinearLayout
+                style="@style/NewPeePointItemContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -165,15 +187,15 @@
 
             <!-- Paper -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__paper" />
 
             <LinearLayout
+                style="@style/NewPeePointItemContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -202,15 +224,15 @@
 
             <!-- Cologne -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__cologne" />
 
             <LinearLayout
+                style="@style/NewPeePointItemContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -239,15 +261,15 @@
 
             <!-- Disabled-adapted -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__disabled_adapted" />
 
             <LinearLayout
+                style="@style/NewPeePointItemContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -276,15 +298,15 @@
 
             <!-- Customer compulsory -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__need_be_customer" />
 
             <LinearLayout
+                style="@style/NewPeePointItemContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -301,19 +323,12 @@
                     android:gravity="center_horizontal"
                     android:text="@string/new_pee_point__no" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="@string/new_pee_point__didnt_check" />
-
             </LinearLayout>
 
 
             <!-- Comment -->
             <TextView
-                style="@style/NewPeePointItem"
+                style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/new_pee_point__comments" />
@@ -328,10 +343,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/new_pee_point__comments_hint"
-                    android:maxLines="4"
                     android:inputType="textMultiLine"
+                    android:maxLines="4"
                     android:scrollbarThumbVertical="@drawable/scrollbars"
-                    android:scrollbars="vertical"/>
+                    android:scrollbars="vertical" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -339,7 +354,7 @@
                 android:id="@+id/new_pee_point__btn__done"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/new_pee_point__done" />
 
         </LinearLayout>
