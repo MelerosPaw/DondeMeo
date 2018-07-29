@@ -52,6 +52,7 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun logIn() {
-        startActivity(Intent(this, MainActivity::class.java))
+        MainActivity.start(this)
+        finish()
     }
 }

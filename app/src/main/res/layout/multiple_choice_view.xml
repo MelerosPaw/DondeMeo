@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/multiple_choice_view__label__title"
+        style="@style/NewPeePointItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_pee_point__soap" />
+
+    <FrameLayout
+        android:id="@+id/multiple_choice_view__container__option_box"
+        style="@style/NewPeePointItemContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/multiple_choice_view__view__highlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:background="@color/colorPrimary" />
+
+        <LinearLayout
+            android:id="@+id/multiple_choice_view__container__option_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </FrameLayout>
+
+</LinearLayout>

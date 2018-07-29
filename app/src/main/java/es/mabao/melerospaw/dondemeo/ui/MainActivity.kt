@@ -1,6 +1,7 @@
 package es.mabao.melerospaw.dondemeo.ui
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import es.mabao.melerospaw.dondemeo.R
@@ -9,6 +10,12 @@ import es.mabao.melerospaw.dondemeo.extensions.toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
+
+    companion object {
+        fun start(context: Context) {
+            context.startActivity(Intent(context, MainActivity::class.java))
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +41,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun displayNewPoint(data: Intent?) {
-        toast("Ha llegado un punto de orina nuevo")
+        toast("Ha llegado un punto de orina nuevo con jabón: " + data?.getStringExtra(NewPeePointActivity.EXTRA_SOAP))
     }
 
 }

@@ -1,17 +1,23 @@
 package es.mabao.melerospaw.dondemeo.ui
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.annotation.TargetApi
 import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.transition.TransitionManager
 import android.view.MenuItem
 import android.view.View
-import android.view.View.*
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
+import android.widget.TextView
 import es.mabao.melerospaw.dondemeo.R
 import es.mabao.melerospaw.dondemeo.base.BaseActivity
+import es.mabao.melerospaw.dondemeo.extensions.findFirstChild
 import es.mabao.melerospaw.dondemeo.extensions.kitKatApiLevel
-import es.mabao.melerospaw.dondemeo.extensions.toPixels
 import kotlinx.android.synthetic.main.activity_new_pee_point.*
 
 
@@ -19,6 +25,7 @@ class NewPeePointActivity : BaseActivity() {
 
     companion object {
         val REQUEST_CODE: Int = 1
+        val EXTRA_SOAP: String = "EXTRA_SOAP"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,7 +51,9 @@ class NewPeePointActivity : BaseActivity() {
 
     private fun loadView() {
         new_pee_point__btn__done.setOnClickListener {
-            setResult(Activity.RESULT_OK)
+            val data = Intent()
+            data.putExtra(EXTRA_SOAP, test.getSelectedOption())
+            setResult(Activity.RESULT_OK, data)
             finish()
         }
 
@@ -61,10 +70,18 @@ class NewPeePointActivity : BaseActivity() {
 
     @TargetApi(Build.VERSION_CODES.KITKAT)
     private val soapOnClickListener = View.OnClickListener {
-        kitKatApiLevel { TransitionManager.beginDelayedTransition(new_pee_point__container__soap_selector) }
+
         with(new_pee_point__selected_soap) {
-            x = it.x
-            y = it.y
+
+            // Animates position
+            val animationX = ObjectAnimator.ofFloat(this, "translationX", it.x)
+            val animationY = ObjectAnimator.ofFloat(this, "translationY", it.y)
+            val animatorSet = AnimatorSet()
+            animatorSet.playTogether(animationX, animationY)
+            animatorSet.start()
+
+            // Animates size
+            kitKatApiLevel { TransitionManager.beginDelayedTransition(new_pee_point__container__soap_selector) }
             val currentLayoutParams = layoutParams
             currentLayoutParams.height = it.height
             currentLayoutParams.width = it.width
@@ -73,5 +90,20 @@ class NewPeePointActivity : BaseActivity() {
                 visibility = VISIBLE
             }
         }
+    }
+
+    private fun getSelectedSoapOption() : String? {
+        var selectedOption: String? = null
+
+        if (new_pee_point__selected_soap.visibility != VISIBLE) {
+            selectedOption = null
+        } else {
+            val selectedX = new_pee_point__selected_soap.x
+            val selectedView: TextView? = new_pee_point__container__soap_options.findFirstChild { it.x == selectedX }
+            if (selectedView != null) {
+                selectedOption = selectedView.text.toString()
+            }
+        }
+        return selectedOption
     }
 }
