@@ -75,8 +75,7 @@
 
             </FrameLayout>
 
-
-            <!-- Cleanness -->
+            <!-- region Cleanness -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -88,10 +87,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp" />
 
+            <!--endregion-->
+
             <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
-                android:id="@+id/test"
+                android:id="@+id/new_pee_point__selector__soap"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:mcv_title="@string/new_pee_point__soap">
 
                 <es.mabao.melerospaw.dondemeo.widgets.OptionView
                     android:layout_width="wrap_content"
@@ -110,7 +112,9 @@
 
             </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
-            <!-- Soap -->
+
+
+            <!-- region Soap -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -169,7 +173,9 @@
 
             </FrameLayout>
 
-            <!-- Basin -->
+            <!--endregion-->
+
+            <!-- region Basin -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -205,8 +211,9 @@
 
             </LinearLayout>
 
+            <!--endregion-->
 
-            <!-- Paper -->
+            <!-- region Paper -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -242,8 +249,9 @@
 
             </LinearLayout>
 
+            <!--endregion-->
 
-            <!-- Cologne -->
+            <!-- region Cologne -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -279,8 +287,9 @@
 
             </LinearLayout>
 
+            <!--endregion-->
 
-            <!-- Disabled-adapted -->
+            <!-- region Disabled-adapted -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -316,8 +325,9 @@
 
             </LinearLayout>
 
+            <!--endregion-->
 
-            <!-- Customer compulsory -->
+            <!-- region Customer compulsory -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -346,8 +356,9 @@
 
             </LinearLayout>
 
+            <!--endregion-->
 
-            <!-- Comment -->
+            <!-- region Comment -->
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -370,6 +381,8 @@
                     android:scrollbars="vertical" />
 
             </android.support.design.widget.TextInputLayout>
+
+            <!--endregion-->
 
             <Button
                 android:id="@+id/new_pee_point__btn__done"

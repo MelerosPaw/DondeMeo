@@ -4,7 +4,6 @@ import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.annotation.TargetApi
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
@@ -52,7 +51,7 @@ class NewPeePointActivity : BaseActivity() {
     private fun loadView() {
         new_pee_point__btn__done.setOnClickListener {
             val data = Intent()
-            data.putExtra(EXTRA_SOAP, test.getSelectedOption())
+            data.putExtra(EXTRA_SOAP, new_pee_point__selector__soap.getSelectedOption())
             setResult(Activity.RESULT_OK, data)
             finish()
         }
@@ -74,8 +73,8 @@ class NewPeePointActivity : BaseActivity() {
         with(new_pee_point__selected_soap) {
 
             // Animates position
-            val animationX = ObjectAnimator.ofFloat(this, "translationX", it.x)
-            val animationY = ObjectAnimator.ofFloat(this, "translationY", it.y)
+            val animationX = ObjectAnimator.ofFloat(this, View.TRANSLATION_X, it.x)
+            val animationY = ObjectAnimator.ofFloat(this, View.TRANSLATION_Y, it.y)
             val animatorSet = AnimatorSet()
             animatorSet.playTogether(animationX, animationY)
             animatorSet.start()

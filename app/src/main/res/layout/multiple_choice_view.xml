@@ -8,8 +8,7 @@
         android:id="@+id/multiple_choice_view__label__title"
         style="@style/NewPeePointItemTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/new_pee_point__soap" />
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:id="@+id/multiple_choice_view__container__option_box"

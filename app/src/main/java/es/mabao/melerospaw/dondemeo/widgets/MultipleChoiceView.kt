@@ -3,6 +3,7 @@ package es.mabao.melerospaw.dondemeo.widgets
 import android.animation.ObjectAnimator
 import android.annotation.TargetApi
 import android.content.Context
+import android.content.res.TypedArray
 import android.os.Build
 import android.util.AttributeSet
 import android.view.View
@@ -17,10 +18,33 @@ import kotlinx.android.synthetic.main.multiple_choice_view.view.*
 
 class MultipleChoiceView : LinearLayout {
 
+    var title: String = "No title set"
+    var attributes: AttributeSet? = null
+
     constructor(context: Context) : super(context)
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
+
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+        setTitle(attrs)
+    }
+
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) :
+            super(context, attrs, defStyleAttr) {
+        setTitle(attrs)
+    }
+
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) :
+            super(context, attrs, defStyleAttr, defStyleRes) {
+        setTitle(attrs)
+
+    }
+
+    private fun setTitle(attributeSet: AttributeSet?) {
+        attributeSet.let {
+            val attrs = context.obtainStyledAttributes(it, R.styleable.MultipleChoiceView)
+            title = attrs.getString(R.styleable.MultipleChoiceView_mcv_title)
+            attrs.recycle()
+        }
+    }
 
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
         super.onLayout(changed, l, t, r, b)
@@ -47,6 +71,7 @@ class MultipleChoiceView : LinearLayout {
             for (view in childList) {
                 multiple_choice_view__container__option_list.addView(view)
             }
+            multiple_choice_view__label__title.text = title
         }
     }
 
