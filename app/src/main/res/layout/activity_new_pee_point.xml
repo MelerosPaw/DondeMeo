@@ -19,6 +19,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!--region Picture-->
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -75,7 +77,10 @@
 
             </FrameLayout>
 
+            <!--endregion-->
+
             <!-- region Cleanness -->
+
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
@@ -88,6 +93,8 @@
                 android:layout_marginTop="10dp" />
 
             <!--endregion-->
+
+            <!-- region Soap -->
 
             <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
                 android:id="@+id/new_pee_point__selector__soap"
@@ -112,253 +119,140 @@
 
             </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
-
-
-            <!-- region Soap -->
-            <TextView
-                style="@style/NewPeePointItemTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/new_pee_point__soap" />
-
-            <FrameLayout
-                android:id="@+id/new_pee_point__container__soap_selector"
-                android:layout_width="match_parent"
-                style="@style/NewPeePointItemContent"
-                android:layout_height="wrap_content">
-
-                <View
-                    android:id="@+id/new_pee_point__selected_soap"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorPrimary" />
-
-                <LinearLayout
-                    android:id="@+id/new_pee_point__container__soap_options"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/new_pee_point__label__there_is_soap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingTop="@dimen/new_pee_point__item_padding"
-                        android:paddingBottom="@dimen/new_pee_point__item_padding"
-                        android:gravity="center_horizontal"
-                        android:text="@string/new_pee_point__there_is" />
-
-                    <TextView
-                        android:id="@+id/new_pee_point__label__there_isnt_soap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingTop="@dimen/new_pee_point__item_padding"
-                        android:paddingBottom="@dimen/new_pee_point__item_padding"
-                        android:gravity="center_horizontal"
-                        android:text="@string/new_pee_point__there_isnt" />
-
-                    <TextView
-                        android:id="@+id/new_pee_point__label__havent_checked_soap"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:paddingTop="@dimen/new_pee_point__item_padding"
-                        android:paddingBottom="@dimen/new_pee_point__item_padding"
-                        android:gravity="center_horizontal"
-                        android:text="@string/new_pee_point__didnt_check" />
-
-                </LinearLayout>
-
-            </FrameLayout>
-
             <!--endregion-->
 
             <!-- region Basin -->
-            <TextView
-                style="@style/NewPeePointItemTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/new_pee_point__basin" />
 
-            <LinearLayout
-                style="@style/NewPeePointItemContent"
+            <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
+                android:id="@+id/new_pee_point__selector__basin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:mcv_title="@string/new_pee_point__basin">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__there_is" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__there_isnt" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__didnt_check" />
 
-            </LinearLayout>
+            </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
             <!--endregion-->
 
             <!-- region Paper -->
-            <TextView
-                style="@style/NewPeePointItemTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/new_pee_point__paper" />
 
-            <LinearLayout
-                style="@style/NewPeePointItemContent"
+            <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
+                android:id="@+id/new_pee_point__selector__toiler_paper"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:mcv_title="@string/new_pee_point__paper">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__there_is" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__there_isnt" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__didnt_check" />
 
-            </LinearLayout>
+            </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
             <!--endregion-->
 
             <!-- region Cologne -->
-            <TextView
-                style="@style/NewPeePointItemTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/new_pee_point__cologne" />
 
-            <LinearLayout
-                style="@style/NewPeePointItemContent"
+            <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
+                android:id="@+id/new_pee_point__selector__cologne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:mcv_title="@string/new_pee_point__cologne">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__there_is" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__there_isnt" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__didnt_check" />
 
-            </LinearLayout>
+            </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
             <!--endregion-->
 
             <!-- region Disabled-adapted -->
-            <TextView
-                style="@style/NewPeePointItemTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/new_pee_point__disabled_adapted" />
 
-            <LinearLayout
-                style="@style/NewPeePointItemContent"
+            <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
+                android:id="@+id/new_pee_point__selector__disabled_adapted"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:mcv_title="@string/new_pee_point__disabled_adapted">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="@string/new_pee_point__yes" />
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/new_pee_point__there_is" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:text="@string/new_pee_point__no" />
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/new_pee_point__there_isnt" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__didnt_check" />
 
-            </LinearLayout>
+            </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
             <!--endregion-->
 
             <!-- region Customer compulsory -->
-            <TextView
-                style="@style/NewPeePointItemTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/new_pee_point__need_be_customer" />
 
-            <LinearLayout
-                style="@style/NewPeePointItemContent"
+            <es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView
+                android:id="@+id/new_pee_point__selector__need_be_customer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:mcv_title="@string/new_pee_point__need_be_customer">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__yes" />
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
+                <es.mabao.melerospaw.dondemeo.widgets.OptionView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="@string/new_pee_point__no" />
 
-            </LinearLayout>
+            </es.mabao.melerospaw.dondemeo.widgets.MultipleChoiceView>
 
             <!--endregion-->
 
             <!-- region Comment -->
+
             <TextView
                 style="@style/NewPeePointItemTitle"
                 android:layout_width="wrap_content"
