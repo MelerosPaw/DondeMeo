@@ -7,11 +7,11 @@
     android:gravity="center"
     tools:context=".ui.MainActivity">
 
-    <View
-        android:id="@+id/main__map"
+    <fragment
+        android:id="@+id/map_container"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryLight" />
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +29,7 @@
             app:fabSize="normal"/>
 
         <android.support.design.widget.BottomNavigationView
+            android:id="@+id/main__bar__bottom_navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:itemBackground="@color/colorPrimary"

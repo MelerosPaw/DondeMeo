@@ -37,7 +37,7 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun loadView() {
-        checkEnableLoginButton()
+//        checkEnableLoginButton()
     }
 
     private fun checkEnableLoginButton() {
@@ -53,6 +53,7 @@ class LoginActivity : BaseActivity() {
 
     private fun logIn() {
         MainActivity.start(this)
+//        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 }

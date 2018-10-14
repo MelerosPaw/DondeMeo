@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="es.mabao.melerospaw.dondemeo">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:name=".DondeMeoApplication"
         android:allowBackup="true"
@@ -14,19 +16,28 @@
         <activity
             android:name=".ui.LoginActivity"
             android:label="@string/login__screen_title">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
-        <activity android:name=".ui.MainActivity"
-            android:label="@string/main__screen_title"/>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/main__screen_title" />
 
-        <activity android:name=".ui.NewPeePointActivity"
-            android:label="@string/new_pee_point__screen_title"/>
+        <activity
+            android:name=".ui.NewPeePointActivity"
+            android:label="@string/new_pee_point__screen_title" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
 
     </application>
 
