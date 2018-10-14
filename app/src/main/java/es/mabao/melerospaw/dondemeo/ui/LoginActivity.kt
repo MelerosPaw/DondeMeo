@@ -1,6 +1,5 @@
 package es.mabao.melerospaw.dondemeo.ui
 
-import android.content.Intent
 import android.os.Bundle
 import es.mabao.melerospaw.dondemeo.R
 import es.mabao.melerospaw.dondemeo.base.BaseActivity
@@ -53,7 +52,6 @@ class LoginActivity : BaseActivity() {
 
     private fun logIn() {
         MainActivity.start(this)
-//        startActivity(Intent(this, MainActivity::class.java))
         finish()
     }
 }
