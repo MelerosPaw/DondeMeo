@@ -10,7 +10,8 @@ interface MainContract {
         fun onReviewedPointsRetrieved(positions: List<LatLng>)
         fun showHistory()
         fun showInfoWindowForMarker(marker: Marker)
-        fun openPeePointDetail(position: LatLng)
+        fun openPeePointDetail(marker: Marker)
+        fun openNewPeePoint(point: LatLng)
     }
 
     interface Presenter {
@@ -20,7 +21,7 @@ interface MainContract {
         fun fetchUnexploredPoints()
         fun fetchReviewedPoints()
         fun onMarkerClicked(marker: Marker)
-        fun removePoints(points: List<LatLng>?)
+        fun onEmptySpaceLongClicked(point: LatLng)
     }
 
 }

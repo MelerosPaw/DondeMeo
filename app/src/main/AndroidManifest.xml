@@ -25,7 +25,7 @@
 
         <activity
             android:name=".ui.MainActivity"
-            android:label="@string/main__screen_title" />
+            android:label="@string/permissions__screen_title" />
 
         <activity
             android:name=".ui.NewPeePointActivity"

@@ -36,12 +36,13 @@ class LoginActivity : BaseActivity() {
     }
 
     private fun loadView() {
-//        checkEnableLoginButton()
+        checkEnableLoginButton()
     }
 
     private fun checkEnableLoginButton() {
-        val enabled = login__input__user.text.isNotBlank() &&
-                login__input__password.text.isNotBlank()
+        val enabled = true // TODO 15/10/2018 Eliminar
+//        val enabled = login__input__user.text.isNotBlank() &&
+//                login__input__password.text.isNotBlank()
         val backgroundColorId = if (enabled) R.color.colorPrimary else R.color.enabled_button_normal
         val textColorId = if (enabled) R.color.primaryText else R.color.button_text_disabled
 

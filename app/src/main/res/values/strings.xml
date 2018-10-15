@@ -13,7 +13,11 @@
     <string name="login__menu_item__history">Historial</string>
 
     <!--  Main -->
-    <string name="main__screen_title">¿Dónde quieres orinar?</string>
+    <string name="permissions__screen_title">¿Dónde quieres orinar?</string>
+    <string name="permissions__location_rationale_message">El permiso de acceso a la localización solo es utilizado para centrar el mapa en su ubicación actual. ¿Seguro que desea no concederlo?</string>
+    <string name="permissions__permission_denied">Permiso rechazado</string>
+    <string name="permissions__im_sure">Estoy seguro</string>
+    <string name="permissions__change">Cambiar</string>
 
     <!--  New Pee Point -->
     <string name="new_pee_point__screen_title">¿Cómo se orina aquí?</string>
